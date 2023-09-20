@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+// Отримуємо список ul.gallery
+const gallery = document.querySelector('.gallery');
+
+// Створюємо змінну для зберігання розмітки
+let markup = '';
+
+// Для кожного об'єкта в масиві images
+images.forEach(image => {
+  // Створюємо шаблонний рядок з елементами li і img
+  const item = `<li><img src="${image.url}" alt="${image.alt}" width="640"></li>`;
+  // Додаємо елемент li до розмітки
+  markup += item;
+});
+
+// Вставляємо розмітку у список ul.gallery за одну операцію
+gallery.insertAdjacentHTML('beforeend', markup);
