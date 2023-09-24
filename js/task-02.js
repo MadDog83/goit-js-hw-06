@@ -27,5 +27,6 @@ ingredients.forEach(ingredient => {
 
 // Вставляємо усі елементи li за одну операцію у список ul#ingredients
 list.append(...items);
+// Консоль для мене :)
 console.log(list);
 console.log(list.innerHTML);
